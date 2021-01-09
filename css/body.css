@@ -1,0 +1,113 @@
+*{
+	padding: 0;
+    margin: 0;
+}
+
+.products{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: 370px;
+	grid-gap: 45px;
+	margin-top: 40px;
+	margin-left: 20px; 
+	margin-right: 50px;
+
+}
+
+.product {
+	outline: 2px solid grey; 
+	background-color: green;
+
+}
+
+.product-name{
+	text-align: center
+
+}
+
+.products img{
+	width: 100%;
+	height: 65%;
+	margin-top: 0%;
+
+}
+
+.buy{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.father {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+
+}
+
+.category{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-rows: 50px;
+	grid-gap: 20px;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.category div{
+	background-color: grey;
+	outline: 2px solid grey; 
+}
+
+.productView{
+	display: grid;
+	grid-template-columns: 1.5fr 1fr ;
+	grid-auto-rows: 570px;
+	grid-gap: 10px;
+	margin-top: 40px;
+	margin-left: 20px; 
+	margin-right: 50px;
+
+}
+ 
+.image, .parameters {
+	background-color: green;
+	outline: 2px solid grey; 
+}
+
+.image img {
+	width: 100%;
+	height: 500px;
+	
+}
+
+.name {
+	text-align: center;
+	padding-top: 10px;
+	text-decoration: underline;
+}
+
+.content_big {
+	padding-left: 10px;
+	padding-top: 70px;
+}
+
+.price {
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+
+/* <?php
+if(isset($_POST['A'])){
+$product = R::dispense('product');
+$product->name =         'Чемодан из Криминального Чтива (Б/У)';
+$product->price =        '1049$';
+$product->contentSmall = ' '; 
+$product->contentBig =   'Его содержимое заставляет трепетать';
+$product->picture =      'PulpFiction.jpg';
+$product->date =          date("m.d.y");   
+$product->discount =     '0';
+R::store($product);
+}
+?> */
+
+

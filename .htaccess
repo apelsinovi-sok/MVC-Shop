@@ -1,0 +1,12 @@
+
+RewriteEngine on
+RewriteBase /
+
+RewriteRule ^index\.php$ - [L]
+Options -Indexes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+
+RewriteRule ^(.*)$ index.php?route=$1 [L]
