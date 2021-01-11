@@ -10,7 +10,5 @@ R::setup( 'mysql:host=localhost;dbname=redbeanphp','root', '');
 $router = new Router;
 $router->Run();
 
-
-
 ?>
 

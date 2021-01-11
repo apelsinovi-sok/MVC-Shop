@@ -4,7 +4,7 @@ class Router{
 
 private $routes;
 private $classUrl;
-private $r = 0;
+
 
 public function __construct(){
 
@@ -18,7 +18,6 @@ private function getUrl(){
 	if(!empty($_SERVER['REQUEST_URI'])){
 		return trim($_SERVER['REQUEST_URI'], '/');
 	}
-  
 } 
 
 public function Run(){
@@ -38,20 +37,11 @@ public function Run(){
 
     $ObjectController = new $controlName;
       echo $ObjectController->$actionName($value);
-     
-       echo '</br>';
-       break;
+      break;
 
- 
-}/*else {
-	$r++;
-	if ($r == count($this->routes)) {
-		echo "Страница не найдена";
-	}*/
-     
-  } 
-
-}
+      } 
+    } 
+  }
 }
 
  ?>
