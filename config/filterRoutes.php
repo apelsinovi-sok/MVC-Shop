@@ -1,15 +1,15 @@
 <?php
 return array(
 
-'top' => 'ORDER BY `price` ASC',
+'top' => 'SELECT * FROM `product` ORDER BY `price` ASC',
+ 
+'low' => 'SELECT * FROM `product` ORDER BY `price` DESC',
+ 
+'new' => 'SELECT * FROM `product` ORDER BY `date` ASC',
+ 
+'old' => 'SELECT * FROM `product` ORDER BY `date` DESC',
 
-'low' => 'ORDER BY `price` DESC',
-
-'new' => 'ORDER BY `date` ASC',
-
-'old' => 'ORDER BY `date` DESC',
-
-'' => 'ORDER BY `id` DESC'
+'' => 'SELECT * FROM `product` ORDER BY `id` DESC'
 
 );
 

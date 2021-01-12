@@ -9,7 +9,7 @@ public static function Request($filter){
 
 	foreach ($routes as $key => $value) {
 	    if (preg_match("~$key~", $filter)) {
-	    	echo $value;
+	    	return $value;
 	    	break;
          
       }
