@@ -24,6 +24,7 @@ R::store($category);
 
  <?php 
  require_once (ROOT.'/views/header.php');
+ require_once (ROOT.'/views/filter.php');
  ?>
 
 <div class="father">

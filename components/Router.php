@@ -22,7 +22,8 @@ private function getUrl(){
 
 public function Run(){
 	$uri = $this->getUrl();
-
+  $filter = explode('?=', $uri);
+  $uri = array_shift($filter);
  foreach ($this->routes as $key => $value) {
 
    if(preg_match("~$key~", $uri)){
@@ -32,11 +33,10 @@ public function Run(){
    $controlName = ucfirst($controlName);
    $actionName = 'action'.ucfirst(array_shift($value));
    $classUrl = ROOT.'/controllers/'.$controlName.'.php';
-
    include_once($classUrl);
 
     $ObjectController = new $controlName;
-      echo $ObjectController->$actionName($value);
+      echo $ObjectController->$actionName($value , $filter['0']);
       break;
 
       } 

@@ -9,6 +9,5 @@ require (ROOT.'/db/rb-mysql.php');
 R::setup( 'mysql:host=localhost;dbname=redbeanphp','root', '');
 $router = new Router;
 $router->Run();
-
 ?>
 

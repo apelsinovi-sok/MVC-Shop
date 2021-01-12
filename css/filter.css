@@ -1,0 +1,17 @@
+.filter {
+	height: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	margin-left: 950px;
+
+}
+
+
+.filter div{
+	float: left;
+	padding-left: 5px;
+}
+
+.filter a{
+	color: grey;
+}

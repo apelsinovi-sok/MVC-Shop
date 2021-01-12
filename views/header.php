@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-</body>
+
 </html>
 <link rel="stylesheet" href="/css/header.css" type="text/css"/>
  <body>
@@ -13,7 +11,5 @@
     	<div><a href="/">Регистрация</a></div>
     </div>      
  </div>
-
- </body>
 </html>
 
