@@ -17,6 +17,4 @@ public static function Request($filter){
     }
   }
 
-
-
 ?> 

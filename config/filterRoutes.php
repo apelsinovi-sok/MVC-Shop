@@ -9,7 +9,7 @@ return array(
  
 'old' => 'SELECT * FROM `product` ORDER BY `date` DESC',
 
-'' => 'SELECT * FROM `product` ORDER BY `id` DESC'
+'' => 'SELECT * FROM `product` ORDER BY `date` ASC'
 
 );
 

@@ -1,7 +1,7 @@
 <?php
 class MainProduct{
 
-	const FILTER = 'SELECT * FROM `product` ORDER BY `id` DESC';
+	const FILTER = 'SELECT * FROM `product` ORDER BY `date` ASC';
 
 	public static function getProducts($value , $filter){ 
 	   
