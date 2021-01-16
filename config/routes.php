@@ -8,6 +8,10 @@ return array (
 
 'product' => 'index/index',
 
+'registration' => 'identification/registration',
+
+'authorization'=>'identification/authorization',
+
 '' => 'index/index/$1'
 
 

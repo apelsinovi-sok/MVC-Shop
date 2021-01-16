@@ -8,7 +8,7 @@
     	<div><a href="/">Домой</a></div>
     </div>
     <div class="account">
-    	<div><a href="/">Регистрация</a></div>
+    	<div><a href="/registration">Регистрация</a></div>
     </div>      
  </div>
 </html>
