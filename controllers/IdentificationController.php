@@ -6,16 +6,22 @@ class IdentificationController {
 		require_once(ROOT.'/views/registration.php');
 		if (isset($_POST['registration'])) {
          	echo MainRegistration::DataChecking();
-
          }
 	}
 
 	public function actionauthorization(){
 		require_once(ROOT.'/models/MainAuthorization.php');
 		require_once(ROOT.'/views/authorization.php');
+		if (isset($_POST['authorization'])) {
+			if (MainAuthorization::DataChecking()) {
+			 	echo "Авторизация успешна";
+			 }
+			 else {
+			 	echo "Неверная почта или пароль";
+			 }
+		}
 	}
 }
 
 ?>
 
-<!-- '/^[A-Za-z0-9\s]+$/' --> 

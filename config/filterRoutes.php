@@ -1,7 +1,8 @@
 <?php
+
 return array(
 
-'top' => 'SELECT * FROM `product` ORDER BY `price` ASC',
+'top' => 'SELECT * FROM `product`  ORDER BY `price` ASC LIMIT 0,3',
  
 'low' => 'SELECT * FROM `product` ORDER BY `price` DESC',
  
@@ -9,7 +10,7 @@ return array(
  
 'old' => 'SELECT * FROM `product` ORDER BY `date` DESC',
 
-'' => 'SELECT * FROM `product` ORDER BY `date` ASC'
+'' => 'SELECT * FROM `product`  ORDER BY `date` ASC '
 
 );
 

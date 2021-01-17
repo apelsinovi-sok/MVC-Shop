@@ -1,7 +1,7 @@
 <?php
 class MainProduct{
 
-	const FILTER = 'SELECT * FROM `product` ORDER BY `date` ASC';
+	const FILTER = 'SELECT * FROM `product` WHERE id  ORDER BY `date` ASC LIMIT 1,3 ';
 
 	public static function getProducts($value , $filter){ 
 	   
