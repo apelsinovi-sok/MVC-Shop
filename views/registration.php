@@ -26,6 +26,8 @@
   <br><input type = "submit" name = "registration" value = "Зарегестрироваться"/></br>
 
 </form>
+
+
  
 
 <!-- <? require_once(ROOT.'/views/footer.php'); ?> -->

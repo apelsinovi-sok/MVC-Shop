@@ -9,6 +9,7 @@
     </div>
     <div class="account">
     	<div><a href="/registration">Регистрация</a></div>
+    	<div><a href="/authorization">Аавторизация</a></div>
     </div>      
  </div>
 </html>

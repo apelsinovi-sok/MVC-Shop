@@ -42,6 +42,9 @@ R::store($category);
    <? endforeach; ?>
 </div>
 </div>
+<? for ($i=1; $i <=4 ; $i++) : ?>
+<? echo '<a href="&='.$i.'">'.$i.'</a>' ; ?>
+<? endfor; ?>
 </body>
 <? require_once(ROOT.'/views/footer.php'); ?>
 </html>
@@ -59,4 +62,4 @@ R::store($category);
 	<div class="product"><img src="/img/8.jpg"><div class="product-name">Товар 1</div><div class="buy">Купить</div></div>
 	<div class="product"><img src="/img/8.jpg"><div class="product-name">Товар 1</div><div class="buy">Купить</div></div>
 	<div class="product"><img src="/img/8.jpg"><div class="product-name">Товар 1</div><div class="buy">Купить</div></div> -->
-
+<a href="">й</a>
