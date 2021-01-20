@@ -95,6 +95,9 @@
 	padding-top: 10px;
 }
 
+.light a{
+	color : white;
+}
 
 /* <?php
 if(isset($_POST['A'])){
