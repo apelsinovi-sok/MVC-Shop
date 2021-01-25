@@ -15,19 +15,15 @@ R::store($category);
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Товары</title>
-<style>
-</style>
+<title>Главная</title>
+<link rel="stylesheet" href="/css/body.css" type="text/css"/> 
+
+<? require_once(ROOT.'/views/header.php');
+   require_once(ROOT.'/views/filter.php'); ?>
 </head>
 <body>
-<link rel="stylesheet" href="/css/body.css" type="text/css"/>
 
- <?php 
- require_once (ROOT.'/views/header.php');
- require_once (ROOT.'/views/filter.php');
- ?>
-
-<div class="father">
+ <div class="father">
 
 	<div class="category">
 	<? foreach ($categories as $category) : ?>
@@ -40,10 +36,11 @@ R::store($category);
    	    <div class="product"> <? echo '<img src="/img/'.$product['picture'].'">'?> <div class="product-name"><? echo $product['name'];?>
         </div><div class="buy"> <? echo '<a href="/product/'.$product['category'].'/'.$product['id'].'">Купить</a>'?></div></div>
    <? endforeach; ?>
+
 </div>
-</div>
+</div> 
 </body>
-<? require_once(ROOT.'/views/footer.php'); ?>
+<!-- <? require_once(ROOT.'/views/footer.php'); ?> -->
 </html>
 
 

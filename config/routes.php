@@ -12,6 +12,8 @@ return array (
 
 'authorization'=>'identification/authorization',
 
+'exit'=>'identification/exit',
+
 'boot'=>'identification/boot',
 
 '' => 'index/index/$1'
