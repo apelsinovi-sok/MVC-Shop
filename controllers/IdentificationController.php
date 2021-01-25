@@ -1,11 +1,20 @@
 <?php
 class IdentificationController {
 
+	public function actionexit(){
+		header('Location: /');
+        unset($_SESSION['user']);
+   }
+
 	public function actionregistration(){
 		require_once(ROOT.'/models/MainRegistration.php');
 		require_once(ROOT.'/views/registration.php');
 		if (isset($_POST['registration'])) {
-         	echo MainRegistration::DataChecking();
+         	if (MainRegistration::DataChecking() === true) {
+         		header('Location: /');
+         	} else {
+         		echo MainRegistration::DataChecking();
+         	}
          }
 	}
 
@@ -15,13 +24,17 @@ class IdentificationController {
 		if (isset($_POST['authorization'])) {
 			if (MainAuthorization::DataChecking()) {
 			 	echo "Авторизация успешна";
+			 	header('Location: /');
 			 }
 			 else {
 			 	echo "Неверная почта или пароль";
-			 }
+		   }
 		}
 	}
-}
 
+	public function actionboot(){
+		require_once(ROOT.'/views/boot.php');
+	}	
+}
 ?>
 

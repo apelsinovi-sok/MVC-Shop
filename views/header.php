@@ -8,7 +8,9 @@
     	<div><a href="/">Домой</a></div>
     </div>
     <div class="account">
-    	<div><a href="/registration">Регистрация</a></div>
+    	<? if(!$_SESSION['user']) echo '<div><a href="/registration">Регистрация</a></div>';?>
+    	<? if(!$_SESSION['user']) echo '<div><a href="/authorization">Авторизация</a></div>';?>
+    	<? if($_SESSION['user']) echo '<div><a href="/exit">Выход</a></div>';?>  	
     </div>      
  </div>
 </html>

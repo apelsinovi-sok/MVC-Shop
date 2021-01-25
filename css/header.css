@@ -28,8 +28,9 @@
 }
 
 .account div{
-	padding-left: 80%;
-	padding-top: 20px;
+float: left;
+margin-top: 20px;
+padding-left: 200px;
 }
 
 .header a {

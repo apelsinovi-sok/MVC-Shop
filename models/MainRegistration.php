@@ -54,7 +54,7 @@ class MainRegistration {
 
         if (empty($error)) {
           self::DataRecording();
-          return 'Успешная регистрация';
+          return true;
         }
           return $error = array_shift($error); 
    }

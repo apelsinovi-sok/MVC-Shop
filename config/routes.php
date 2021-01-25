@@ -12,6 +12,8 @@ return array (
 
 'authorization'=>'identification/authorization',
 
+'boot'=>'identification/boot',
+
 '' => 'index/index/$1'
 
 
