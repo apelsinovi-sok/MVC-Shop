@@ -16,15 +16,55 @@ R::store($category);
 <head>
 <meta charset="utf-8" />
 <title>Главная</title>
-<link rel="stylesheet" href="/css/body.css" type="text/css"/> 
+
 
 <? require_once(ROOT.'/views/header.php');
    require_once(ROOT.'/views/filter.php'); ?>
 </head>
-<body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
- <div class="father">
+<link rel="stylesheet" type="text/css" href="/css/body.css">
+<body> 
+<section>
+  <div class="container">
+  <div class="row">
+   <div class="col-xl-2 col-lg-12">
+    <div class="row">
+      <div class="col-12 pe-5">
+        <ul class="list-group">
+  <? foreach ($categories as $category) : ?>
+  <li class=<? if($number['0'] == $category['name_url']) echo "list-group-item active"; if($number['0'] != $category['name_url']) echo "list-group-item" ;?>><? echo '<a href="/product/'.$category['name_url'].'" >'.$category['name'].'</a>'?></li>
+  <? endforeach; ?>
+</ul>
+      </div>
+   </div>
+    </div>
 
+    <div class="col-xl-9 col-lg-12">
+      <div class="row">
+       <? foreach ($products as $product) : ?>
+        <div class="col-xl-4 col-lg-4 col-md-6">
+      <div class="card" style="width: 19rem;">
+   <!-- <img src="/img/Wilson.jpg" class="card-img-top" alt="...">  -->
+  <? echo '<img src="/img/'.$product['picture'].'" class="card-img-top" alt="...">'?>
+  <div class="card-body">
+    <h5 class="card-title"><? echo $product['name'] .' - '. $product['price'];?></h5>
+    <p class="card-text"><? echo $product['content_big'] ?></p>
+    <? echo '<a href="/product/'.$product['category'].'/'.$product['id'].'" class="btn btn-primary">Купить</a>'?>
+  </div>
+</div>
+    </div>
+     <? endforeach; ?>
+      </div>
+      </div>
+    </div>
+
+</div>
+</div>
+</section>
+
+
+<!--  <div class="father">
 	<div class="category">
 	<? foreach ($categories as $category) : ?>
 	   <div class= <? if($number['0'] == $category['name_url']) echo "light";?>><? echo '<a href="/product/'.$category['name_url'].'" >'.$category['name'].'</a>'?></div>
@@ -38,11 +78,14 @@ R::store($category);
    <? endforeach; ?>
 
 </div>
-</div> 
+</div> -->
+
 </body>
-<!-- <? require_once(ROOT.'/views/footer.php'); ?> -->
+</section>
+ <? require_once(ROOT.'/views/footer.php'); ?> 
 </html>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
 
 <!-- <form name = "test" action="" method="post" >

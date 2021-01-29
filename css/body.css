@@ -114,3 +114,33 @@ R::store($product);
 ?> */
 
 
+
+.card{
+	margin-bottom: 40px;
+}
+
+.card img{
+  height: 232px;
+}
+
+.btn-primary{
+
+background-color: #ebe134;
+
+border-color: #ebe134;
+
+color: white;
+
+}
+
+.btn-primary:hover{
+
+background-color: #d1ca3b;
+
+border-color: #d1ca3b;
+
+color: white;
+
+}
+
+
