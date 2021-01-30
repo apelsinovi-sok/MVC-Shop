@@ -27,9 +27,28 @@ class ProductController{
 
 
 	public function actionaddbasket($value){
-	  require_once ('models/MainBasket.php');
-	  $_SESSION['sum'] = MainBasket::fillBasket($value);
-	  echo $_SESSION['sum'];
+
+	  $basket = array();
+	  if (isset($_SESSION['basket'])) {
+	  	 $basket = $_SESSION['basket'];
+	  }
+	  $key = $value[0];
+
+	  if (array_key_exists($key, $basket)) {
+	  	$basket[$key]++;
+	  }else {
+	  	$basket[$key] = 1;
+	  }
+	   
+	  
+	   foreach ($basket as $key => $value) {
+	   	$value1 = $value1 + $value;
+	   }
+	   $_SESSION['basket'] = $basket;
+	   $_SESSION['sum'] = $value1;
+	   /*unset($_SESSION['basket']);
+	   unset($_SESSION['sum']);*/
+	   echo $_SESSION['sum'];
 	}
 }
 

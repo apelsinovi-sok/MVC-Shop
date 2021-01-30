@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 define('ROOT' , __DIR__);
 require_once(ROOT.'/components/Router.php');
@@ -7,6 +8,7 @@ R::setup( 'mysql:host=localhost;dbname=redbeanphp','root', '');
 $router = new Router;
 $router->Run();
 echo $_SESSION['user'];
+ob_start();
 ?>
 
 

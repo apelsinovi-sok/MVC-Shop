@@ -1,6 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <?php
-ob_start();
 class Router{
 private $routes;
 private $classUrl;
@@ -13,7 +12,6 @@ private function getUrl(){
 		return trim($_SERVER['REQUEST_URI'], '/');
 	}
 }
-
 
 public function Run(){
 $uri = $this->getUrl();
@@ -36,26 +34,5 @@ foreach ($this->routes as $key => $value){
     } 
   }
 }
-ob_start();
 ?>
-
-<!-- <input type="text" class="title" name="title">
-<button id="lol">Кнопка</button>
- -->
-<!-- <script type="text/javascript">
-    $(document).ready(function(){
-        $('button#lol').click(function() {
-            var titleVar = $('input.title').val();
-            $.ajax({
-                method: 'POST',
-                url: 'rrr.php',
-                data: {title : titleVar}
-            })
-                .done(function(data) {
-                   $('#hello').html(data);
-                });
-        });
-    });
-</script>  -->
-
 

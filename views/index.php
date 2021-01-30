@@ -21,7 +21,7 @@ R::store($category);
 <? require_once(ROOT.'/views/header.php');
    require_once(ROOT.'/views/filter.php'); ?>
 </head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 
 <link rel="stylesheet" type="text/css" href="/css/body.css">
 <body> 
@@ -69,6 +69,7 @@ R::store($category);
     </div>
 </div>
 </div>
+
 </section>
 
 </body>
