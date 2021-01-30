@@ -95,6 +95,9 @@
 	padding-top: 10px;
 }
 
+.light a{
+	color : white;
+}
 
 /* <?php
 if(isset($_POST['A'])){
@@ -109,5 +112,35 @@ $product->discount =     '0';
 R::store($product);
 }
 ?> */
+
+
+
+.card{
+	margin-bottom: 40px;
+}
+
+.card img{
+  height: 232px;
+}
+
+.btn-warning{
+
+background-color: #ebe134;
+
+border-color: #ebe134;
+
+color: white;
+
+}
+
+.btn-warning:hover{
+
+background-color: #d1ca3b;
+
+border-color: #d1ca3b;
+
+color: white;
+
+}
 
 

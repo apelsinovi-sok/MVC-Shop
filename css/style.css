@@ -1,0 +1,26 @@
+header .navbar-light{
+	background-color: #ebe134;
+}
+
+section .container{
+	margin-top: 40px;
+}
+
+.card{
+	margin-bottom: 40px;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #ebe134;
+    border-color: #ebe134;
+}
+.card-img-top{
+   max-height: 258px;
+   max-width: 365px;
+  }
+
+div.card {
+	max-width: 365px;
+}

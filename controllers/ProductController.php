@@ -5,18 +5,14 @@ class ProductController{
 
 	   require_once ('models/MainProduct.php');
 	   require_once ('models/MainCategories.php');
-
 	   $categories = array();
 	   $categories = MainCategories::getCategories();
 	   $products = MainProduct::getProduct($number);
-	  /* var_dump($product*/
 	   if($products){
 	   require_once ('views/product.php');
 	   
-	    } else {
-	        echo 'Такого товара нет в наличии';
-	     }
-
+	    } else 
+	        echo 'Такого товара нет в наличии';     
 	}
 
 
@@ -30,6 +26,11 @@ class ProductController{
 	}
 
 
+	public function actionaddbasket($value){
+	  require_once ('models/MainBasket.php');
+	  $_SESSION['sum'] = MainBasket::fillBasket($value);
+	  echo $_SESSION['sum'];
+	}
 }
 
 ?>
