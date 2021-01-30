@@ -39,6 +39,7 @@ img{
 </section>
 
 
+
 <!-- <div class="father">
 	<div class="category">
 	<? foreach ($categories as $category) : ?>

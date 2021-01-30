@@ -11,9 +11,11 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
         <? if(!$_SESSION['user']) echo '<a class="nav-link active" aria-current="page" href="/registration">Регистрация</a>'; ?>
-        <? if(!$_SESSION['user']) echo '<a class="nav-link"  href="/authorization">Авторизация</a>';?>
+        <? if(!$_SESSION['user'])echo '<a class="nav-link"  href="/authorization">Авторизация</a>';?>
         <? if($_SESSION['user']) echo '<a class="nav-link"  href="/">Кабинет</a>'; ?>
         <? if($_SESSION['user']) echo '<a class="nav-link"  href="/exit">Выйти</a>'; ?>
+        <a class="nav-link" id="basket"> <?= $_SESSION['sum']?></a>
+
     </div>
   </div>
 </div>
@@ -21,8 +23,19 @@
  </div>
  
 
-<!-- <div class="account">
-    	<? if(!$_SESSION['user']) echo '<div><a href="/registration">Регистрация</a></div>';?>
-    	<? if(!$_SESSION['user']) echo '<div><a href="/authorization">Авторизация</a></div>';?>
-    	<? if($_SESSION['user']) echo '<div><a href="/exit">Выход</a></div>';?>  	
-    </div> -->
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('.basket').click(function(){
+            var id = $(this).attr("id");
+            $.ajax({
+                method: 'POST',
+                url: '/basket/'+id,
+                data: {}
+            })
+                .done(function(data) {
+                   $('#basket').html(data);
+                });
+           });
+      });
+</script> 
