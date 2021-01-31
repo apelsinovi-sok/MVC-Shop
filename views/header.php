@@ -13,11 +13,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
-        <? if(!$_SESSION['user'])echo '<a class="nav-link active" aria-current="page" href="/registration">Регистрация</a>'; ?>
+        <? if(!$_SESSION['user'])echo '<a class="nav-link active"  href="/registration">Регистрация</a>'; ?>
         <? if(!$_SESSION['user'])echo '<a class="nav-link"  href="/authorization">Авторизация</a>';?>
-        <? if($_SESSION['user']) echo '<a class="nav-link"  href="/">Кабинет</a>'; ?>
+        <? if($_SESSION['user']) echo '<a class="nav-link"  href="/profile">Кабинет</a>'; ?>
         <? if($_SESSION['user']) echo '<a class="nav-link"  href="/exit">Выйти</a>'; ?>
-        <!-- <a class="nav-link" id="xxx">Корзина:</a> -->
         <a class="nav-link" id="basket"><?='Корзина: '. $_SESSION['sum']?></a>
     </div>      
   </div>
@@ -27,7 +26,6 @@
 
 
 <script type="text/javascript">
-
     $(document).ready(function(){
         $('.basket').click(function(){
             var id = $(this).attr("id");
@@ -38,6 +36,7 @@
             })
                 .done(function(data) {
                    $('#basket').html('Корзина:'+data);
+                   alert('Товар был добавлен в корзину');
                 });
            });
       });

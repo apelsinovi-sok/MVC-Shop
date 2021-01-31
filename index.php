@@ -7,7 +7,6 @@ require_once (ROOT.'/db/rb-mysql.php');
 R::setup( 'mysql:host=localhost;dbname=redbeanphp','root', '');
 $router = new Router;
 $router->Run();
-echo $_SESSION['user'];
 ob_start();
 ?>
 

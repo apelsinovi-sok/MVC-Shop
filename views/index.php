@@ -1,16 +1,3 @@
-
-<!-- 
-<?php
-if(isset($_POST['A'])){
-$category = R::dispense('category');
-$category->name = 'Оружие';
-$category->nameUrl ='weapon';
-$category->status = '1';
-$category->number = '5';
-R::store($category);
-}
-?> 
-  -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +9,12 @@ R::store($category);
    require_once(ROOT.'/views/filter.php'); ?>
 </head>
 
+<!-- <?$r = $_GET['sort']; echo $r;?>
+<? if (isset($_GET['sort'])) :?>
+<? $e = '?sort='.$r ?>
+<?endif;?>
+<?$b = '&mort=222' ?>
+<?='<a href="/'.$e.''.$b.'">1</a>'?> -->
 
 <link rel="stylesheet" type="text/css" href="/css/body.css">
 <body> 
@@ -48,7 +41,7 @@ R::store($category);
    <!-- <img src="/img/Wilson.jpg" class="card-img-top" alt="...">  -->
   <? echo '<img src="/img/'.$product['picture'].'" class="card-img-top" alt="...">'?>
   <div class="card-body">
-    <h5 class="card-title"><?= $product['name'] .' - '. $product['price'];?></h5>
+    <h5 class="card-title"><?= $product['name'] .' - '. $product['price'].'$';?></h5>
     <p class="card-text"><? echo $product['content_big'] ?></p>
     <?= '<a href="/product/'.$product['category'].'/'.$product['id'].'" class="btn btn-warning ">Купить</a>'?>
 
@@ -78,18 +71,4 @@ R::store($category);
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-
-<!-- <form name = "test" action="" method="post" >
-<br>
-  <input type = "submit" name = "A" value = "Отправить"/>
-</br>
-</form>
-
- -->
-
-<!-- 	<div class="product"><img src="/img/8.jpg"><div class="product-name">Товар 1</div><div class="buy">Купить</div></div>
-	<div class="product"><img src="/img/8.jpg"><div class="product-name">Товар 1</div><div class="buy">Купить</div></div>
-	<div class="product"><img src="/img/8.jpg"><div class="product-name">Товар 1</div><div class="buy">Купить</div></div>
-	<div class="product"><img src="/img/8.jpg"><div class="product-name">Товар 1</div><div class="buy">Купить</div></div> -->
 

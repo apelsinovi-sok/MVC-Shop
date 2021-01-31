@@ -15,7 +15,7 @@ private function getUrl(){
 
 public function Run(){
 $uri = $this->getUrl();
-$filter = explode('?=', $uri);
+$filter = explode('?sort=', $uri);
 $uri = array_shift($filter);
 
 foreach ($this->routes as $key => $value){

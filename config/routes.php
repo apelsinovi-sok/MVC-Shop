@@ -16,6 +16,8 @@ return array (
 
 'exit'=>'identification/exit',
 
+'profile'=>'identification/profile',
+
 'boot'=>'identification/boot',
 
 '' => 'index/index/$1'

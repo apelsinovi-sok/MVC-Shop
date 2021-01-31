@@ -34,7 +34,18 @@ class IdentificationController {
 
 	public function actionboot(){
 		require_once(ROOT.'/views/boot.php');
-	}	
+	}
+
+
+	public function actionprofile(){
+	require_once(ROOT.'/models/MainOutputBasket.php');
+    require_once(ROOT.'/views/profile.php');
+    
+    }
+
 }
+
+
+
 ?>
 

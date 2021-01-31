@@ -36,9 +36,9 @@ class ProductController{
 
 	  if (array_key_exists($key, $basket)) {
 	  	$basket[$key]++;
-	  }else {
-	  	$basket[$key] = 1;
-	  }
+	    }else {
+	    	$basket[$key] = 1;
+	    }
 	   
 	  
 	   foreach ($basket as $key => $value) {
