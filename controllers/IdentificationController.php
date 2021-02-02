@@ -13,7 +13,10 @@ class IdentificationController {
          	if (MainRegistration::DataChecking() === true) {
          		header('Location: /');
          	} else {
-         		echo MainRegistration::DataChecking();
+         		echo '<script>
+	                 alert("'.MainRegistration::DataChecking().'");
+                     </script>';
+         		
          	}
          }
 	}
@@ -23,11 +26,14 @@ class IdentificationController {
 		require_once(ROOT.'/views/authorization.php');
 		if (isset($_POST['authorization'])) {
 			if (MainAuthorization::DataChecking()) {
-			 	echo "Авторизация успешна";
-			 	header('Location: /');
+			 	header('Location: /');  
+			 	
+
 			 }
 			 else {
-			 	echo "Неверная почта или пароль";
+			 	echo "<script>
+	                 alert('Неверная почта или пароль');
+                     </script>";
 		   }
 		}
 	}
@@ -44,7 +50,6 @@ class IdentificationController {
     }
 
 }
-
 
 
 ?>

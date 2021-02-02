@@ -5,7 +5,7 @@
      }
  ?>
  <div class = 'header'>
- 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ebe134;">
+ 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ebe134;">
   <div class="container">
     <a class="navbar-brand" href="/">Главная</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,9 @@
 </div>
 </nav>
 </div>
-
+<style type="text/css">
+  margin-top: 55px;
+</style>
 
 <script type="text/javascript">
     $(document).ready(function(){

@@ -70,8 +70,14 @@
 .btn {
   margin-top: auto;
 }
-</style>
 
+img{
+	height: 300px;
+	width: 450px;
+}
+</style>
+<? foreach ($products as $product) : ?>
+ <? endforeach; ?>
 <section>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -84,7 +90,7 @@
   <div class="card">
     <div class="row ">
 
-      <div class="col-md-7 px-3">
+      <div class="col-md-7  px-3">
         <div class="card-block px-6">
           <h4 class="card-title">Horizontal Card with Carousel - Bootstrap 4 </h4>
           <p class="card-text">
@@ -92,7 +98,7 @@
           </p>
           <p class="card-text">Made for usage, commonly searched for. Fork, like and use it. Just move the carousel div above the col containing the text for left alignment of images</p>
           <br>
-          <a href="#" class="mt-auto btn btn-primary  ">Read More</a>
+          <a href="#" class="mt-auto btn btn-primary  ">В корзину</a>
         </div>
       </div>
       <!-- Carousel start -->
@@ -106,7 +112,8 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block" src="https://picsum.photos/450/300?image=1072" alt="">
+              <?='<img class="d-block" src="/img/'.$product['picture'].'" alt="">'?>
+              
             </div>
             <div class="carousel-item">
               <img class="d-block" src="https://picsum.photos/450/300?image=855" alt="">
@@ -125,15 +132,14 @@
           </div>
         </div>
       </div>
-      <!-- End of carousel -->
+
     </div>
   </div>
-  <!-- End of card -->
+
 
 </div>
 
 
- 
  <br>
 <br>
 <br>
@@ -141,15 +147,6 @@
    
 </div>
 </section>
-
-
-
-
-
-
-
-
-
 
 
 

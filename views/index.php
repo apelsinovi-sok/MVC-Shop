@@ -17,7 +17,7 @@
 <?='<a href="/'.$e.''.$b.'">1</a>'?> -->
 
 <link rel="stylesheet" type="text/css" href="/css/body.css">
-<body> 
+<body style="margin-top: 55px;"> 
 <section>
   <div class="container">
   <div class="row">
