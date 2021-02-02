@@ -1,6 +1,6 @@
 <?
 $title = $_POST['title'];
-echo $title;
 
+echo $_SESSION['sum'];
 
 ?>

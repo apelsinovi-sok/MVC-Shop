@@ -1,10 +1,6 @@
 <?php
 class IdentificationController {
 
-	public function actionexit(){
-		header('Location: /');
-        unset($_SESSION['user']);
-   }
 
 	public function actionregistration(){
 		require_once(ROOT.'/models/MainRegistration.php');
@@ -38,17 +34,26 @@ class IdentificationController {
 		}
 	}
 
-	public function actionboot(){
-		require_once(ROOT.'/views/boot.php');
-	}
+	public function actionexit(){
+		header('Location: /');
+        unset($_SESSION['user']);
+        unset($_SESSION['basket']);
+	    unset($_SESSION['sum']);
+	    unset($_SESSION['user_id']);
+   }
 
-
-	public function actionprofile(){
+	
+	public function actionbasket(){
 	require_once(ROOT.'/models/MainOutputBasket.php');
-    require_once(ROOT.'/views/profile.php');
-    
+    require_once(ROOT.'/views/basket.php');
+    if (empty($_SESSION['user'])) {
+    	header('Location: /');
+    }
     }
 
+    public function actionboot(){
+		require_once(ROOT.'/views/boot.php');
+	}
 }
 
 

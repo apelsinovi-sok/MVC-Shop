@@ -8,6 +8,8 @@ return array (
 
 'basket/([0-9]+)'=>'product/addbasket/$1',
 
+'basket/delete'=>'product/deletebasket',
+
 'product' => 'index/index',
 
 'registration' => 'identification/registration',
@@ -16,7 +18,7 @@ return array (
 
 'exit'=>'identification/exit',
 
-'profile'=>'identification/profile',
+'basket'=>'identification/basket',
 
 'boot'=>'identification/boot',
 

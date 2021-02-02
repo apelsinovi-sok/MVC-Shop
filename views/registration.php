@@ -13,7 +13,7 @@
 <? if($_SESSION['user']) 
   header('Location: /');?>
 <? require_once (ROOT.'/views/header.php'); ?>
-<body style="margin-top: 55px;">
+<body style="margin-top: 70px;">
 <div class="container col-3 mt-4">
   <form name = "test" action="" method="post">
   <div class="mb-3">
@@ -36,7 +36,7 @@
     <label for="exampleInputPassword1" class="form-label">Повторите пароль</label>
     <input type="password" name="password2" class="form-control" id="exampleInputPassword1">
   </div>
-  <button type="submit" name = "registration" class="btn btn-primary">Зарегестрироваться</button>
+  <button type="submit" name = "registration" class="btn btn-warning">Зарегестрироваться</button>
 </form>
 </div>
 

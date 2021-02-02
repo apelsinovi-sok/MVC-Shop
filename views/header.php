@@ -13,19 +13,16 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
-        <? if(!$_SESSION['user'])echo '<a class="nav-link active"  href="/registration">Регистрация</a>'; ?>
+        <? if(!$_SESSION['user'])echo '<a class="nav-link "  href="/registration">Регистрация</a>'; ?>
         <? if(!$_SESSION['user'])echo '<a class="nav-link"  href="/authorization">Авторизация</a>';?>
-        <? if($_SESSION['user']) echo '<a class="nav-link"  href="/profile">Кабинет</a>'; ?>
+        <!-- <? if($_SESSION['user']) echo '<a class="nav-link"  href="/profile">Кабинет</a>'; ?> -->
+        <? if($_SESSION['user']) echo '<a class="nav-link" href="/basket" id="basket">Корзина: '.$_SESSION['sum'].'</a>'?>
         <? if($_SESSION['user']) echo '<a class="nav-link"  href="/exit">Выйти</a>'; ?>
-        <a class="nav-link" id="basket"><?='Корзина: '. $_SESSION['sum']?></a>
     </div>      
   </div>
 </div>
 </nav>
 </div>
-<style type="text/css">
-  margin-top: 55px;
-</style>
 
 <script type="text/javascript">
     $(document).ready(function(){

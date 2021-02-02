@@ -11,9 +11,6 @@ class MainBasket{
 		}
         
 		$_SESSION['basket'] = $basket;
-		/*var_dump($_SESSION['basket']);*/
-		/*unset($_SESSION['basket']);
-		unset($_SESSION['sum']);*/
 		return self::basketStatus($basket);
 		
 

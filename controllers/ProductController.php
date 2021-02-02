@@ -27,9 +27,12 @@ class ProductController{
 
 
 	public function actionaddbasket($value){
-
+      $user = R::findOne('user', 'email = ?', [$_SESSION['user']]);
+      $_SESSION['basket'] = json_decode($user->basket, true);
 	  $basket = array();
+      
 	  if (isset($_SESSION['basket'])) {
+
 	  	 $basket = $_SESSION['basket'];
 	  }
 	  $key = $value[0];
@@ -40,15 +43,26 @@ class ProductController{
 	    	$basket[$key] = 1;
 	    }
 	   
-	  
 	   foreach ($basket as $key => $value) {
 	   	$value1 = $value1 + $value;
 	   }
+
+       $basketSave = R::load('user', $user->id);
+       $basketSave->basket = json_encode($basket);
+       R::store($basketSave);
+
 	   $_SESSION['basket'] = $basket;
 	   $_SESSION['sum'] = $value1;
-	   /*unset($_SESSION['basket']);
-	   unset($_SESSION['sum']);*/
 	   echo $_SESSION['sum'];
+	}
+
+	public function actiondeletebasket(){
+	   unset($_SESSION['basket']);
+       unset($_SESSION['sum']);
+       $delete = R::load('user', $_SESSION['user_id']);
+       $delete->basket = '';
+       R::store($delete);
+      
 	}
 }
 
