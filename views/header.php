@@ -40,3 +40,13 @@
            });
       });
 </script> 
+
+<?
+if (!isset($_SESSION['user'])) {
+  echo '<script type="text/javascript">
+  $(document).ready(function(){
+     $(".basket").css("display", "none");
+  });
+</script>';
+}
+ ?>

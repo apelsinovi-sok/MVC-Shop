@@ -27,6 +27,7 @@ class ProductController{
 
 
 	public function actionaddbasket($value){
+	if(isset($_SESSION['user'])){
       $user = R::findOne('user', 'email = ?', [$_SESSION['user']]);
       $_SESSION['basket'] = json_decode($user->basket, true);
 	  $basket = array();
@@ -55,7 +56,7 @@ class ProductController{
 	   $_SESSION['sum'] = $value1;
 	   echo $_SESSION['sum'];
 	}
-
+   }
 	public function actiondeletebasket(){
 	   unset($_SESSION['basket']);
        unset($_SESSION['sum']);

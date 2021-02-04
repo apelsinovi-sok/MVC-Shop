@@ -20,6 +20,8 @@ return array (
 
 'basket'=>'identification/basket',
 
+'admin'=>'adminpanel/addproduct',
+
 'boot'=>'identification/boot',
 
 '' => 'index/index/$1'
