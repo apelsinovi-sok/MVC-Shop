@@ -15,7 +15,7 @@
       <div class="navbar-nav ms-auto">
         <? if(!$_SESSION['user'])echo '<a class="nav-link "  href="/registration">Регистрация</a>'; ?>
         <? if(!$_SESSION['user'])echo '<a class="nav-link"  href="/authorization">Авторизация</a>';?>
-        <!-- <? if($_SESSION['user']) echo '<a class="nav-link"  href="/profile">Кабинет</a>'; ?> -->
+        <? if($_SESSION['user_status']==1) echo '<a class="nav-link"  href="/admin">Кабинет</a>'; ?>
         <? if($_SESSION['user']) echo '<a class="nav-link" href="/basket" id="basket">Корзина: '.$_SESSION['sum'].'</a>'?>
         <? if($_SESSION['user']) echo '<a class="nav-link"  href="/exit">Выйти</a>'; ?>
     </div>      

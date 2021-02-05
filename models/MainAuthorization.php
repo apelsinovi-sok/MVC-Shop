@@ -8,6 +8,7 @@ class MainAuthorization{
 			if (password_verify($_POST['password'], $user->password)) {
 				$_SESSION['user'] = $user->email;
 				$_SESSION['user_id'] = $user->id;
+				$_SESSION['user_status'] = $user->status;
 				self::UpdateBasket($user);
 				return true;
 			}
