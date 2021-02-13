@@ -18,7 +18,7 @@
         <? if($_SESSION['user_status']==1) echo '<a class="nav-link"  href="/admin">Кабинет</a>'; ?>
         <? if($_SESSION['user']) echo '<a class="nav-link" href="/basket" id="basket">Корзина: '.$_SESSION['sum'].'</a>'?>
         <? if($_SESSION['user']) echo '<a class="nav-link"  href="/exit">Выйти</a>'; ?>
-    </div>      
+    </div>
   </div>
 </div>
 </nav>
@@ -39,7 +39,9 @@
                 });
            });
       });
-</script> 
+</script>
+
+
 
 <?
 if (!isset($_SESSION['user'])) {

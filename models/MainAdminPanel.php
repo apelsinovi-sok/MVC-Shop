@@ -48,24 +48,28 @@ class MainAdminPanel{
     }
 
     private static function check_file($post){
-    if($post != 'image/jpeg' and $post != 'image/png')
+    if($post != 'image/jpeg' and $post != 'image/png'){
 		  self::$error[] = 'Неверный формат картинки';
+		}
     }
 
 	private static function check_price($post){
-		if(!preg_match('/^[0-9]+/', $post))
+		if(!preg_match('/^[0-9]+/', $post)){
           self::$error[] = 'В цене запрещенные символы';
     }
-
-   private static function check_content($post){
-   	    if(iconv_strlen($post)<20)
-   	      self::$error[] = 'Слишком короткое описание';
 	}
 
+   private static function check_content($post){
+   	    if(iconv_strlen($post)<20){
+   	      self::$error[] = 'Слишком короткое описание';
+	}
+}
+
 	private static function check_category($post){
-		if(!preg_match('/^[a-z]+/', $post))
+		if(!preg_match('/^[a-z]+/', $post)){
 		  self::$error[] = 'Напишите категорию на латинице в нижнем регистре';
     }
+	}
 
 }
 

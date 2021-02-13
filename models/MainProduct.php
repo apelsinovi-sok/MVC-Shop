@@ -4,10 +4,13 @@ class MainProduct{
 	const FILTER = 'SELECT * FROM `product` WHERE id  ORDER BY `date` DESC';
 
 	public static function getProducts($value , $filter){
+     echo $filter;
 
-	   if(!$filter){
+	   if(!isset($filter)){
           $filter = self::FILTER;
+
 	   } else {
+		 
 	   	  require_once('GetRequest.php');
 	       $filter = GetRequest::Request($filter);
 

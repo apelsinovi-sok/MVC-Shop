@@ -4,8 +4,8 @@
 	<title>Админка</title>
 <meta charset="utf-8">
 </head>
+<? require_once(ROOT.'/views/header.php');?>
 <body style="margin-top: 70px;">
-
 
 <div class="container col-3 mt-4">
   <form name="aaa" method="post" action="admin" enctype="multipart/form-data">

@@ -6,6 +6,7 @@
 </head>
 <? require_once(ROOT.'/views/header.php');
    require_once(ROOT.'/views/filter.php'); ?>
+
 <!-- <?$r = $_GET['sort']; echo $r;?>
 <? if (isset($_GET['sort'])) :?>
 <? $e = '?sort='.$r ?>
@@ -36,7 +37,7 @@
        <? foreach ($products as $product) : ?>
         <div class="col-xl-4 col-lg-4 col-md-6">
       <div class="card" style="width: 20rem;">
-   <!-- <img src="/img/Wilson.jpg" class="card-img-top" alt="...">  -->
+
   <?= '<img src="/img/'.$product['picture'].'" class="card-img-top" alt="...">'?>
   <div class="card-body">
     <h5 class="card-title"><?= $product['name'] .' - '. $product['price'].'$';?></h5>
@@ -65,7 +66,7 @@
 
 </body>
 </section>
- <? require_once(ROOT.'/views/footer.php'); ?>
+ <!-- <? require_once(ROOT.'/views/footer.php'); ?> -->
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

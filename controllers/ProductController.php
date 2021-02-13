@@ -59,6 +59,7 @@ class ProductController{
 	   echo $_SESSION['sum'];
 	}
    }
+
 	public function actiondeletebasket(){
 	   unset($_SESSION['basket']);
        unset($_SESSION['sum']);
