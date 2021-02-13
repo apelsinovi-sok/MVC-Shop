@@ -20,7 +20,7 @@ $uri = array_shift($filter);
 
 foreach ($this->routes as $key => $value){
   if(preg_match("~$key~", $uri)){
-  $iternalRoute = preg_replace("~$key~", $value, $uri); 
+  $iternalRoute = preg_replace("~$key~", $value, $uri);
   $value = explode('/', $iternalRoute);
   $controlName = array_shift($value).'Controller';
   $controlName = ucfirst($controlName);
@@ -30,9 +30,8 @@ foreach ($this->routes as $key => $value){
   $ObjectController = new $controlName;
   $ObjectController->$actionName($value, $filter['0']);
   break;
-      } 
-    } 
+      }
+    }
   }
 }
 ?>
-

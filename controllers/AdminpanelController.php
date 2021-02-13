@@ -1,6 +1,6 @@
 <?php
-class AdminpanelController
-{
+class AdminpanelController{
+	
 	public function actionaddproduct(){
 
 		if($_SESSION['user_status']==0){

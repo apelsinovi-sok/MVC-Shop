@@ -1,4 +1,4 @@
- <?php 
+ <?php
  require_once (ROOT.'/views/header.php');
  ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
   background-color:  #eee;
 }
 .title {
- 
+
     margin-bottom: 50px;
     text-transform: uppercase;
 }
@@ -28,7 +28,7 @@
     border: none;
     border-top: 1px solid rgba(34, 36, 38, .1);
     box-shadow: none;
-     
+
 }
 .card {
     font-size: 1em;
@@ -65,7 +65,7 @@
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
-  
+
 
 .btn {
   margin-top: auto;
@@ -82,7 +82,7 @@ img{
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+
 
 <div class="container py-3">
   <div class="title h1 text-center">Horizontal cards - Bootstrap 4</div>
@@ -92,13 +92,17 @@ img{
 
       <div class="col-md-7  px-3">
         <div class="card-block px-6">
-          <h4 class="card-title">Horizontal Card with Carousel - Bootstrap 4 </h4>
+          <h4 class="card-title"><?=$product['name'] ?></h4>
           <p class="card-text">
             The Carousel code can be replaced with an img src, no problem. The added CSS brings shadow to the card and some adjustments to the prev/next buttons and the indicators is rounded now. As in Bootstrap 3
           </p>
           <p class="card-text">Made for usage, commonly searched for. Fork, like and use it. Just move the carousel div above the col containing the text for left alignment of images</p>
           <br>
-          <a href="#" class="mt-auto btn btn-primary  ">В корзину</a>
+          <?='<div class="btn btn-warning basket" id="'.$product['id'].'">
+            В корзину
+          </div>'?>
+
+
         </div>
       </div>
       <!-- Carousel start -->
@@ -113,13 +117,13 @@ img{
           <div class="carousel-inner">
             <div class="carousel-item active">
               <?='<img class="d-block" src="/img/'.$product['picture'].'" alt="">'?>
-              
+
             </div>
             <div class="carousel-item">
-              <img class="d-block" src="https://picsum.photos/450/300?image=855" alt="">
+              <?='<img class="d-block" src="/img/'.$product['picture'].'" alt="">'?>
             </div>
             <div class="carousel-item">
-              <img class="d-block" src="https://picsum.photos/450/300?image=355" alt="">
+              <?='<img class="d-block" src="/img/'.$product['picture'].'" alt="">'?>
             </div>
             <a class="carousel-control-prev" href="#CarouselTest" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -135,8 +139,6 @@ img{
 
     </div>
   </div>
-
-
 </div>
 
 
@@ -144,7 +146,7 @@ img{
 <br>
 <br>
 <div class="footer">
-   
+
 </div>
 </section>
 
@@ -155,13 +157,13 @@ img{
 	<div class="container my-4">
 	<div class="row">
 		<div class="col-lg-2 col-md-2 bg-danger">
-			
+
 	    </div>
-         <div class="col-lg-5 col-md-6"> 
+         <div class="col-lg-5 col-md-6">
           <img src="/img/Wilson.jpg" class="col-lg-12 col-md-12" >
          </div>
-			
-	    
+
+
 	    <div class=" col-lg-4 col-md-4 bg-info">
 			<div>4</div>
 	    </div>
@@ -187,7 +189,7 @@ img{
  <? endforeach; ?>
 <div class="image"> <div> <? echo '<img src="/img/'.$product['picture'].'">';?> </div> </div>
 
-<div class="parameters"> 
+<div class="parameters">
 	<div class="name"><? echo $product['name']; ?></div>
 	<div class="content_big "> <? echo $product['content_big'].'.'; ?></div>
 	<div class="price"><? echo 'Цена:'.$product['price']; ?></div>
@@ -198,4 +200,3 @@ img{
 </body>
 <!-- <? require_once(ROOT.'/views/footer.php'); ?> -->
 </html>
-

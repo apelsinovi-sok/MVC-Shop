@@ -9,6 +9,3 @@ $router = new Router;
 $router->Run();
 ob_start();
 ?>
-
-
-

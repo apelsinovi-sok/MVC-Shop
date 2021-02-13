@@ -12,7 +12,7 @@ class IdentificationController {
          		echo '<script>
 	                 alert("'.MainRegistration::DataChecking().'");
                      </script>';
-         		
+
          	}
          }
 	}
@@ -22,8 +22,8 @@ class IdentificationController {
 		require_once(ROOT.'/views/authorization.php');
 		if (isset($_POST['authorization'])) {
 			if (MainAuthorization::DataChecking()) {
-			 	header('Location: /');  
-			 	
+			 	header('Location: /');
+
 
 			 }
 			 else {
@@ -36,13 +36,14 @@ class IdentificationController {
 
 	public function actionexit(){
 		header('Location: /');
-        unset($_SESSION['user']);
-        unset($_SESSION['basket']);
+      unset($_SESSION['user']);
+      unset($_SESSION['basket']);
 	    unset($_SESSION['sum']);
 	    unset($_SESSION['user_id']);
+			unset($_SESSION['user_status']);
    }
 
-	
+
 	public function actionbasket(){
 	require_once(ROOT.'/models/MainOutputBasket.php');
     require_once(ROOT.'/views/basket.php');
@@ -51,11 +52,7 @@ class IdentificationController {
     }
     }
 
-    public function actionboot(){
-		require_once(ROOT.'/views/boot.php');
-	}
 }
 
 
 ?>
-

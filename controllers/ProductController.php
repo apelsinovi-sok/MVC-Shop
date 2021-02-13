@@ -10,9 +10,9 @@ class ProductController{
 	   $products = MainProduct::getProduct($number);
 	   if($products){
 	   require_once ('views/product.php');
-	   
-	    } else 
-	        echo 'Такого товара нет в наличии';     
+
+	    } else
+	        echo 'Такого товара нет в наличии';
 	}
 
 
@@ -20,7 +20,7 @@ class ProductController{
 		require_once ('models/MainCategories.php');
 		require_once ('models/MainProductByCategory.php');
 		$categories = array();
-	    $categories = MainCategories::getCategories();
+	  $categories = MainCategories::getCategories();
 		$products = MainProductByCategory::getProductByCategory($number['0']);
 		require_once ('views/index.php');
 	}
@@ -31,7 +31,7 @@ class ProductController{
       $user = R::findOne('user', 'email = ?', [$_SESSION['user']]);
       $_SESSION['basket'] = json_decode($user->basket, true);
 	  $basket = array();
-      
+
 	  if (isset($_SESSION['basket'])) {
 
 	  	 $basket = $_SESSION['basket'];
@@ -43,7 +43,7 @@ class ProductController{
 	    }else {
 	    	$basket[$key] = 1;
 	    }
-	   
+
 	   foreach ($basket as $key => $value) {
 	   	$value1 = $value1 + $value;
 	   }
@@ -63,7 +63,7 @@ class ProductController{
        $delete = R::load('user', $_SESSION['user_id']);
        $delete->basket = '';
        R::store($delete);
-      
+
 	}
 }
 

@@ -1,7 +1,7 @@
 <?php
 class MainRegistration {
-   
-   public static $error = array();
+
+
 
    private static function DataRecording(){
         $user = R::dispense('user');
@@ -22,6 +22,8 @@ class MainRegistration {
 
    public static function DataChecking() {
 
+        $error = array();
+
         if (empty(trim($_POST['email']))  or !preg_match('/^[A-Za-z0-9@.\s]+$/',$_POST['email'])) {
          	$error[] = 'Недопустимый почтовый ящик';
         }
@@ -36,13 +38,13 @@ class MainRegistration {
 
         if (empty(trim($_POST['lastname']))  or !preg_match('/^[А-Яа-я\s]+$/u',$_POST['lastname'])) {
           $error[] = 'Некорректная фамилия';
-        }   
+        }
 
         if (empty($_POST['password']) or !preg_match('/^[A-Za-z0-9.\s]+$/',$_POST['password'])) {
         	$error[] = 'Неккоректный пароль';
         }
 
-        if (strlen($_POST['password'])<3) {
+        if (iconv_strlen($_POST['password'])<3) {
           $error[] = 'Пароль слишком короткий';
         } 
 
@@ -50,15 +52,15 @@ class MainRegistration {
         	$error[] = 'Пароли не совпадают';
         }
 
-        
+
 
         if (empty($error)) {
           self::DataRecording();
           return true;
         }
-          return $error = array_shift($error); 
+          return $error = array_shift($error);
    }
 
 }
 
-?> 
+?>

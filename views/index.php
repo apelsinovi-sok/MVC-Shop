@@ -17,17 +17,18 @@
 <?='<a href="/'.$e.''.$b.'">1</a>'?> -->
 
 <link rel="stylesheet" type="text/css" href="/css/body.css">
-<body style="margin-top: 55px;"> 
+<body style="margin-top: 55px;">
 <section>
   <div class="container">
   <div class="row">
    <div class="col-xl-2 col-lg-12">
     <div class="row">
       <div class="col-12 pe-5">
-        <ul class="list-group">
+        <ul class="list-group" >
   <? foreach ($categories as $category) : ?>
-  <li class=<? if($number['0'] == $category['name_url']) echo "list-group-item active"; if($number['0'] != $category['name_url']) echo "list-group-item" ;?>><? echo '<a href="/product/'.$category['name_url'].'" >'.$category['name'].'</a>'?></li>
+  <li class="list-group-item <? if($category['name_url']==$number[0]) echo 'list-group-item-warning'?>" ><? echo '<a href="/product/'.$category['name_url'].'" style="color: grey; text-decoration: none;">'.$category['name'].'</a>'?></li>
   <? endforeach; ?>
+
 </ul>
       </div>
    </div>
@@ -42,7 +43,7 @@
   <?= '<img src="/img/'.$product['picture'].'" class="card-img-top" alt="...">'?>
   <div class="card-body">
     <h5 class="card-title"><?= $product['name'] .' - '. $product['price'].'$';?></h5>
-    <p class="card-text"><?= $product['content_big'] ?></p>
+    <p class="card-text"><?= $product['content_small'] ?></p>
     <?= '<a href="/product/'.$product['category'].'/'.$product['id'].'" class="btn btn-warning ">Купить</a>'?>
 
 <?='<div class="btn btn-warning basket" id="'.$product['id'].'">
@@ -67,8 +68,7 @@
 
 </body>
 </section>
- <? require_once(ROOT.'/views/footer.php'); ?> 
+ <? require_once(ROOT.'/views/footer.php'); ?>
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
