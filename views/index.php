@@ -3,12 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <title>Главная</title>
-
-
+</head>
 <? require_once(ROOT.'/views/header.php');
    require_once(ROOT.'/views/filter.php'); ?>
-</head>
-
 <!-- <?$r = $_GET['sort']; echo $r;?>
 <? if (isset($_GET['sort'])) :?>
 <? $e = '?sort='.$r ?>
@@ -38,7 +35,7 @@
       <div class="row">
        <? foreach ($products as $product) : ?>
         <div class="col-xl-4 col-lg-4 col-md-6">
-      <div class="card" style="width: 19rem;">
+      <div class="card" style="width: 20rem;">
    <!-- <img src="/img/Wilson.jpg" class="card-img-top" alt="...">  -->
   <?= '<img src="/img/'.$product['picture'].'" class="card-img-top" alt="...">'?>
   <div class="card-body">

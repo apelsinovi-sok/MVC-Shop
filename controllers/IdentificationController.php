@@ -5,9 +5,11 @@ class IdentificationController {
 	public function actionregistration(){
 		require_once(ROOT.'/models/MainRegistration.php');
 		require_once(ROOT.'/views/registration.php');
+		require_once(ROOT.'/models/MainAuthorization.php');
 		if (isset($_POST['registration'])) {
          	if (MainRegistration::DataChecking() === true) {
-         		header('Location: /');
+						MainAuthorization::DataChecking();
+						header('Location: /');
          	} else {
          		echo '<script>
 	                 alert("'.MainRegistration::DataChecking().'");

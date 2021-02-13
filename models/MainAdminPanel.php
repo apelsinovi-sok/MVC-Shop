@@ -30,7 +30,7 @@ class MainAdminPanel{
 
        if(empty(self::$error)){
        self::DataRecording($picture_name);
-	   $picture = $manager->make($_FILES['picture']['tmp_name'])->resize(800, 528)->save(ROOT.'/img/'.$picture_name.'.jpg');
+	   $picture = $manager->make($_FILES['picture']['tmp_name'])->resize(1000, 528)->save(ROOT.'/img/'.$picture_name.'.jpg');
 	}else{
 		echo '<script>
 	            alert("'.array_shift(self::$error).'");
@@ -42,7 +42,7 @@ class MainAdminPanel{
 
 	private static function check_name($post){
 
-	if(iconv_strlen($post)>15 or iconv_strlen($post)<4){
+	if(iconv_strlen($post)>23 or iconv_strlen($post)<4){
 		  self::$error[] = 'Неккоректное название';
 	}
     }
@@ -58,7 +58,7 @@ class MainAdminPanel{
     }
 
    private static function check_content($post){
-   	    if(iconv_strlen($post)<25)
+   	    if(iconv_strlen($post)<20)
    	      self::$error[] = 'Слишком короткое описание';
 	}
 

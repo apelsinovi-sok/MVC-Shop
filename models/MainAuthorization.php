@@ -15,18 +15,17 @@ class MainAuthorization{
 			return false;
 		}
 	}
-	
+
 	public static function UpdateBasket($user){
-		
 		$_SESSION['basket'] = json_decode($user->basket, true);
 		$basket = $_SESSION['basket'];
+		if(isset($basket)){
 		foreach ($basket as $key => $value) {
 	   	$value1 = $value1 + $value;
 	    }
 	    $_SESSION['sum'] = $value1;
 	}
-
 }
-
+}
 
 ?>

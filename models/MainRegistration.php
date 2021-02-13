@@ -46,7 +46,7 @@ class MainRegistration {
 
         if (iconv_strlen($_POST['password'])<3) {
           $error[] = 'Пароль слишком короткий';
-        } 
+        }
 
         if (empty($_POST['password2']) or $_POST['password'] != $_POST['password2']) {
         	$error[] = 'Пароли не совпадают';

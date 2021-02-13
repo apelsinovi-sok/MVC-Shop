@@ -1,19 +1,19 @@
 <?php
 class MainProduct{
 
-	const FILTER = 'SELECT * FROM `product` WHERE id  ORDER BY `date`';
+	const FILTER = 'SELECT * FROM `product` WHERE id  ORDER BY `date` DESC';
 
-	public static function getProducts($value , $filter){ 
-	   
+	public static function getProducts($value , $filter){
+
 	   if(!$filter){
           $filter = self::FILTER;
 	   } else {
 	   	  require_once('GetRequest.php');
 	       $filter = GetRequest::Request($filter);
-	      
+
 	   }
-           
-       return $products = R::getAll($filter); 
+
+       return $products = R::getAll($filter);
 
 	   }
 

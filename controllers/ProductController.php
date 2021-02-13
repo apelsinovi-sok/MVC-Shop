@@ -12,8 +12,10 @@ class ProductController{
 	   require_once ('views/product.php');
 
 	    } else
-	        echo 'Такого товара нет в наличии';
-	}
+			echo "<script>
+								 alert('Такого товара нет в наличии');
+						</script>";
+	   }
 
 
 	public function actionviewcategory($number) {
