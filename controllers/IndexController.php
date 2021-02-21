@@ -6,8 +6,8 @@ class IndexController{
 	   require_once ('models/MainCategories.php');
 	   $products = array();
 	   $categories = array();
-	   $products = MainProduct::getProducts($value , $filter);
-	   $categories = MainCategories::getCategories();
+	   $products = MainProduct::getProducts($value , $filter);//выврод всего товара на главной
+	   $categories = MainCategories::getCategories();//вывод списка категорий 
 	   require_once ('views/index.php');
 	}
 }

@@ -2,15 +2,15 @@
 
 return array(
 
-'top' => 'SELECT * FROM `product`  ORDER BY `price` ASC',
+'top' => 'ORDER BY `price` ASC',
 
-'low' => 'SELECT * FROM `product` ORDER BY `price` DESC',
+'low' => 'ORDER BY `price` DESC',
 
-'new' => 'SELECT * FROM `product` ORDER BY `date` DESC',
+'new' => 'ORDER BY `id` DESC',
 
-'old' => 'SELECT * FROM `product` ORDER BY `date` ASC',
+'old' => 'ORDER BY `id` ASC',
 
-'' => 'SELECT * FROM `product`  ORDER BY `date` ASC '
+'' => 'ORDER BY `id` ASC '
 
 );
 

@@ -22,8 +22,6 @@ return array (
 
 'admin'=>'adminpanel/addproduct',
 
-'boot'=>'identification/boot',
-
 '' => 'index/index/$1'
 
 

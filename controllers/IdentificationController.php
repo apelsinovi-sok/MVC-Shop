@@ -2,15 +2,15 @@
 class IdentificationController {
 
 
-	public function actionregistration(){
+	public function actionregistration(){//регистрация пользователя 
 		require_once(ROOT.'/models/MainRegistration.php');
 		require_once(ROOT.'/views/registration.php');
-		require_once(ROOT.'/models/MainAuthorization.php');
+		require_once(ROOT.'/models/MainAuthorization.php');//нужен для мгновенной авторизации
 		if (isset($_POST['registration'])) {
-         	if (MainRegistration::DataChecking() === true) {
-						MainAuthorization::DataChecking();
+         	if (MainRegistration::DataChecking() === true) {//если регистрация успешна
+						MainAuthorization::DataChecking();//при успешной регистрации произвести сразу авторизацию
 						header('Location: /');
-         	} else {
+         	} else {//вывод ошибки
          		echo '<script>
 	                 alert("'.MainRegistration::DataChecking().'");
                      </script>';
@@ -19,7 +19,7 @@ class IdentificationController {
          }
 	}
 
-	public function actionauthorization(){
+	public function actionauthorization(){//авторизация пользователя 
 		require_once(ROOT.'/models/MainAuthorization.php');
 		require_once(ROOT.'/views/authorization.php');
 		if (isset($_POST['authorization'])) {
@@ -36,7 +36,7 @@ class IdentificationController {
 		}
 	}
 
-	public function actionexit(){
+	public function actionexit(){//выход из аккаунта 
 		header('Location: /');
       unset($_SESSION['user']);
       unset($_SESSION['basket']);
@@ -46,7 +46,7 @@ class IdentificationController {
    }
 
 
-	public function actionbasket(){
+	public function actionbasket(){//отображение списка корзины 
 	require_once(ROOT.'/models/MainOutputBasket.php');
     require_once(ROOT.'/views/basket.php');
     if (empty($_SESSION['user'])) {

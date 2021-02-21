@@ -2,7 +2,7 @@
 class MainAuthorization{
 
 
-	public static function DataChecking(){
+	public static function DataChecking(){//проверка данных для автоизации
 		$user = R::findOne('user', 'email = ?', [$_POST['email']]);
 		if($user){
 			if (password_verify($_POST['password'], $user->password)) {
@@ -16,7 +16,7 @@ class MainAuthorization{
 		}
 	}
 
-	public static function UpdateBasket($user){
+	public static function UpdateBasket($user){//обновление корзины при авторизации 
 		$_SESSION['basket'] = json_decode($user->basket, true);
 		$basket = $_SESSION['basket'];
 		if(isset($basket)){

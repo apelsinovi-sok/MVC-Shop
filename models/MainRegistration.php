@@ -3,7 +3,7 @@ class MainRegistration {
 
 
 
-   private static function DataRecording(){
+   private static function DataRecording(){//сохранение пользователя 
         $user = R::dispense('user');
         $user->email=$_POST['email'];
         $user->name=$_POST['name'];
@@ -13,7 +13,7 @@ class MainRegistration {
    }
 
 
-   private static function EmailChecking($email){
+   private static function EmailChecking($email){//проверка не занята ли почта
         if (R::find('user', 'email = ?', [$email])) {
              return true;
         }

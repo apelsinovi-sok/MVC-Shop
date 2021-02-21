@@ -10,8 +10,7 @@
  ?>
 <body>
 <link rel="stylesheet" type="text/css" href="/css/product.css">
-<? foreach ($products as $product) : ?>
- <? endforeach; ?>
+
 <section>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -32,9 +31,10 @@
           </p>
           <p class="card-text">Made for usage, commonly searched for. Fork, like and use it. Just move the carousel div above the col containing the text for left alignment of images</p>
           <br>
-          <?='<div class="btn btn-warning basket" id="'.$product['id'].'">
+
+          <?= (isset($_SESSION['user'])) ? '<div class="btn btn-warning basket" id="'.$product['id'].'">
             В корзину
-          </div>'?>
+          </div>' : '' ?>
 
 
         </div>
@@ -50,14 +50,14 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <?='<img class="d-block" src="/img/'.$product['picture'].'" alt="">'?>
+              <?='<img class="d-block" src="/img/'.$product->picture.'" alt="">'?>
 
             </div>
             <div class="carousel-item">
-              <?='<img class="d-block" src="/img/'.$product['picture'].'" alt="">'?>
+              <?='<img class="d-block" src="/img/'.$product->picture.'" alt="">'?>
             </div>
             <div class="carousel-item">
-              <?='<img class="d-block" src="/img/'.$product['picture'].'" alt="">'?>
+              <?='<img class="d-block" src="/img/'.$product->picture.'" alt="">'?>
             </div>
             <a class="carousel-control-prev" href="#CarouselTest" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

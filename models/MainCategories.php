@@ -1,6 +1,6 @@
 <?php
 
-class MainCategories {
+class MainCategories {//вывод списка категорий 
 
 static function getCategories(){
 

@@ -1,10 +1,10 @@
 <?php
-class MainOutputBasket{
+class MainOutputBasket{//получение полей товара по id 
 
 public static function getProduct($id){
-$min_price = '199$';
-$basket = R::findOne('product', 'id = ?', [$id]);
-return $basket;
+  $basket = R::findOne('product', 'id = ?', [$id]);
+  return $basket;
+
 }
 }
 

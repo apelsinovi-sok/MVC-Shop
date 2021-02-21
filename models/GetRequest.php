@@ -1,20 +1,18 @@
 <?php
 class GetRequest{
 
-public static function Request($filter){
+public static function Request($filter){//поиск sql запросу исходя из параметра фильтрации
 
-	$patch = ROOT.'/config/filterRoutes.php';
-
-	$routes = include ($patch);
+	$routes = include_once ( ROOT.'/config/filterRoutes.php');//массив вида параметр => sql запрос
 
 	foreach ($routes as $key => $value) {
 	    if (preg_match("~$key~", $filter)) {
 	    	return $value;
 	    	break;
-         
+
       }
      }
     }
   }
 
-?> 
+?>

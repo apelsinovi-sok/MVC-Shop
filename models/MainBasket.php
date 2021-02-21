@@ -1,7 +1,7 @@
 <?php
-class MainBasket{
+/*class MainBasket{
    public static function fillBasket($value){
-   	$key = $value['0'];
+   	    $key = $value['0'];
 		$basket = array();
 		$basket = $_SESSION['basket'];
 		if (array_key_exists($key, $basket)) {
@@ -12,10 +12,7 @@ class MainBasket{
         
 		$_SESSION['basket'] = $basket;
 		return self::basketStatus($basket);
-		
-
-
-       
+		   
    }
 
    public static function basketStatus($basket){
@@ -24,6 +21,6 @@ class MainBasket{
    		return $sum;
    	 }
    }
-}
+}*/
 
 ?>

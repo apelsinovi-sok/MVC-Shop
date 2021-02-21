@@ -25,21 +25,21 @@ $i = '1';
 $sum = '0';
 $basketArr = array();
 if (isset($_SESSION['basket'])) {
-  $basketArr = $_SESSION['basket'];
+  $basketArr = $_SESSION['basket'];//содержит массив корзины вида id товара => колличесвто 
 }
 
 ?>
 
 <? foreach (array_keys($basketArr) as $key) :?>
-<? $basket = MainOutputBasket::getProduct($key);
-   $quantity = $_SESSION['basket'][$key]; ?> 
+<? $basket = MainOutputBasket::getProduct($key);//получает все значения полей товара по id
+   $quantity = $_SESSION['basket'][$key]; ?> <!-- колличество конкртеного товара   -->
     <tr class="pop">
       <th scope="row"><?= $i ?></th>
       <td><?= $basket->name ?></td>
       <td><?= $basket->price.'$' ?></td>
       <td><?= $quantity ?></td>
     </tr>
-<?$i++; $sum = $sum+$basket->price*$quantity; ?>
+<?$i++; $sum = $sum+$basket->price*$quantity; ?> <!-- цена всего товара в корзине  -->
 <? endforeach; ?>
 <tr>
 <td>Итого</td>
@@ -61,7 +61,7 @@ if (isset($_SESSION['basket'])) {
 </html>
 
 
-<script type="text/javascript">
+<script type="text/javascript">//вызов функции отчистки корзины 
     $(document).ready(function(){
         $('.delete').click(function(){
             $.ajax({
@@ -69,7 +69,7 @@ if (isset($_SESSION['basket'])) {
                 url: '/basket/delete',
                 data: {}
             })
-                .done(function(data){
+                .done(function(data){//обновление данных на старнице
                 $('.pop').html('');
                 $('.price').html('0$');
                 $('#basket').html('Корзина: 0');
