@@ -29,7 +29,7 @@ class MainAdminPanel{//сохранение товара в бд
 
        if(empty(self::$error)){//обрезка картинки
        self::DataRecording($picture_name);
-	   $picture = $manager->make($_FILES['picture']['tmp_name'])->resize(1000, 528)->save(ROOT.'/img/'.$picture_name.'.jpg');
+	     $picture = $manager->make($_FILES['picture']['tmp_name'])->resize(1000, 528)->save(ROOT.'/img/'.$picture_name.'.jpg');
 	}else{//вывод ошибок 
 		echo '<script>
 	            alert("'.array_shift(self::$error).'");

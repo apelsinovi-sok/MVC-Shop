@@ -24,7 +24,7 @@
 </nav>
 </div>
 
-<script type="text/javascript">//отвечает за добовление товара в корзину 
+<script type="text/javascript">//отвечает за добавление товара в корзину 
     $(document).ready(function(){
         $('.basket').click(function(){
             var id = $(this).attr("id");
@@ -34,7 +34,7 @@
                 data: {}
             })
                 .done(function(data) {
-                   $('#basket').html('Корзина:'+data);//обновление значения колличесвта товара в шапке сайта
+                   $('#basket').html('Корзина:'+data);//обновление значения колличества товара в шапке сайта
                    alert('Товар был добавлен в корзину');
                 });
            });
